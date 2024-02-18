@@ -65,7 +65,7 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ## Test steps
 1. Build and run CiCo.
-2. Enter abcd into the card field
+2. Try to enter abcd into the card field
 
 ## Expected results
 * The program should ignore non-numerical input

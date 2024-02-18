@@ -38,25 +38,19 @@ public class Main {
     private static final int MAX_LENGTH = 8;
 
     @Override
-    public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
-        throws BadLocationException
-    {
-      if (fb.getDocument() != null) {
-        super.insertString(fb, offset, stringToAdd, attr);
-      }
-      else {
+    public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
+      if (string != null && string.matches("\\d+") && (fb.getDocument().getLength() + string.length()) <= MAX_LENGTH) {
+        super.insertString(fb, offset, string, attr);
+      } else {
         Toolkit.getDefaultToolkit().beep();
       }
     }
 
     @Override
-    public void replace(FilterBypass fb, int offset, int lengthToDelete, String stringToAdd, AttributeSet attr)
-        throws BadLocationException
-    {
-      if (fb.getDocument() != null) {
-        super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
-      }
-      else {
+    public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+      if (text != null && text.matches("\\d+") && (fb.getDocument().getLength() + text.length() - length) <= MAX_LENGTH) {
+        super.replace(fb, offset, length, text, attrs);
+      } else {
         Toolkit.getDefaultToolkit().beep();
       }
     }
