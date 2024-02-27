@@ -71,7 +71,16 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * The program should ignore non-numerical input
 
 
+#Test Checkout Button
 
+## Test steps
+
+1. Build and run Cico
+2. Enter a valid card number into the field and click update
+3. Immediately click the "Next User" button without waiting for the timeout
+
+## Expected results:
+* The main panel should appear, allowing the next user to check in or check out without waiting.
 
 
 
