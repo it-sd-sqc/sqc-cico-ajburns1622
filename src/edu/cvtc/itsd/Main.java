@@ -283,6 +283,18 @@ public class Main {
     labelState.setForeground(Color.magenta);
     panelStatus.add(labelState);
 
+    JButton newUserButton = new JButton("Next User");
+    newUserButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    newUserButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        doneProcessing();
+      }
+    });
+
+    newUserButton.setForeground(Color.green);
+    panelStatus.add(newUserButton);
+
     panelStatus.add(Box.createVerticalGlue());
 
     // Error panel ////////////////////////////////////////////////////////////
