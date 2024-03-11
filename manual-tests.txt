@@ -83,7 +83,16 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * The main panel should appear, allowing the next user to check in or check out without waiting.
 
 
+## Module 6 
+## test steps
+1. Build and run Cico
+2. Enter a valid card number into the field and click update
+3. wait 11 seconds
+4. exit the application
 
+# Expected results:
+*the main panel should appear with a different color. The color background should be a light blue/ gray color.
+With black text on update and a white box to enter the ID numbers.
 
 
 
